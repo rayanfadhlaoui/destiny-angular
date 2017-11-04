@@ -1,0 +1,29 @@
+<table>
+	<tr>
+		<th [colSpan]="2">Informations</th>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td>{{fighter.person.firstName}} {{fighter.person.lastName}}</td>
+	</tr>
+	<tr>
+		<td>Birthdate</td>
+		<td>{{birthdate}}</td>
+	</tr>
+	<tr>
+		<td>Race</td>
+		<td>{{fighter.person.race}}</td>
+	</tr>
+	<tr>
+		<td>Home Town</td>
+		<td>{{fighter.person.homeTown.name}}</td>
+	</tr>
+	<tr>
+		<th [colSpan]="2">State</th>
+	</tr>
+	<tr>
+		<td>Injury</td>
+		<td class="red" *ngIf="fighter.injury">{{fighter.state.injury.name}}</td>
+		<td *ngIf="!fighter.injury">None</td>
+	</tr>
+</table>

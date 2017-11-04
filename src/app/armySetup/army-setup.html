@@ -1,0 +1,30 @@
+<h1 align="center">Army Setup</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Race</th>
+		<th>attack</th>
+		<th>Strength</th>
+		<th>Defense</th>
+		<th>dexterity</th>
+		<th>Dodge</th>
+		<th>Reactivity</th>
+		<th>Vitality</th>
+		<th>Bravery</th>
+		<th>Destiny</th>
+	</tr>
+
+	<tr class="clickable" [routerLink]="['/fighterDetail', fighter.id]" *ngFor="let fighter of fighters">
+		<td>{{fighter.person.firstName}} {{fighter.person.lastName}}</td>
+		<td>{{fighter.person.race}}</td>
+		<td>{{fighter.characteristic.attack}}</td>
+		<td>{{fighter.characteristic.strength}}</td>
+		<td>{{fighter.characteristic.defense}}</td>
+		<td>{{fighter.characteristic.dexterity}}</td>
+		<td>{{fighter.characteristic.dodge}}</td>
+		<td>{{fighter.characteristic.reactivity}}</td>
+		<td>{{fighter.characteristic.vitality}}</td>
+		<td>{{fighter.characteristic.bravery}}</td>
+		<td>{{fighter.characteristic.destiny}}</td>
+	</tr>
+</table>

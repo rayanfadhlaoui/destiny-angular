@@ -1,0 +1,28 @@
+<div *ngIf="fighter">
+	<div class='main-frame'>
+		<div class='top-left'>
+			<img [src]="IMAGE_FIGHTER" alt='Ranger' />
+		</div>
+		  <fighter-information [fighter]="fighter" [birthdate]="birthdate" class='top-right'> </fighter-information>
+		
+		<div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#characteristics">Characteristics</a></li>
+				<li><a data-toggle="tab" href="#skills">Skills</a></li>
+				<li><a data-toggle="tab" href="#equipment">Equipment</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="characteristics" class="tab-pane fade in active">
+					<fighter-characteristics [fighter]="fighter"></fighter-characteristics>
+				</div>
+				<div id="skills" class="tab-pane fade">
+					<p>No Skill</p>
+				</div>
+				<div id="equipment" class="tab-pane fade">
+					<p>No Equipment</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
