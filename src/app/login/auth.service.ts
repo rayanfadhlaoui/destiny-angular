@@ -21,8 +21,9 @@ export class AuthService {
    return this.http.post('http://localhost:8080/destiny/sessions/create', body, { headers: contentHeaders });
   }
 
-  loggedIn(): void {
+  loggedIn(id): void {
     this.isLoggedIn = true;
+    localStorage.setItem('id_token', id);
   }
 
   logout(): void {

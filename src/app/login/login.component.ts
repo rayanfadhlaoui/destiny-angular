@@ -9,6 +9,7 @@ import { Router,
 })
 export class LoginComponent {
   messageError: string;
+  private IMAGE_FIGHTER = require('../fighterDisplay/img/Ranger.png');
   user = {'username' : '', 'password': '' };
 
   constructor(public authService: AuthService, public router: Router) {
@@ -20,7 +21,7 @@ export class LoginComponent {
     sub.subscribe(
       response => {
         if (userReturn.id !== -1) {
-          this.authService.loggedIn();
+          this.authService.loggedIn(userReturn.id);
           const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/home';
 
           const navigationExtras: NavigationExtras = {

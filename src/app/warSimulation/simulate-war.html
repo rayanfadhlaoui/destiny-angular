@@ -1,0 +1,8 @@
+<h1 class="center">War Simulation</h1>
+
+<div class="center" *ngIf="nbHumans">
+ <p>Nombre d'hommes :{{nbHumans}} </p>
+ <p>Nombre d'orcs : {{nbOrcs}}</p>
+ <button (click)="simulateWar()">Start War</button>
+ <p>{{winner}}</p>
+</div>

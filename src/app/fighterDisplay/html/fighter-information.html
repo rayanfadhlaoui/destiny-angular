@@ -7,6 +7,14 @@
 		<td>{{fighter.person.firstName}} {{fighter.person.lastName}}</td>
 	</tr>
 	<tr>
+		<td>Level</td>
+		<td>{{fighter.experience.level}}</td>
+	</tr>
+	<tr>
+		<td>Experience</td>
+		<td>{{fighter.experience.currentExp}} / {{fighter.experience.nextLvlExp}}</td>
+	</tr>
+	<tr>
 		<td>Birthdate</td>
 		<td>{{birthdate}}</td>
 	</tr>
@@ -23,7 +31,7 @@
 	</tr>
 	<tr>
 		<td>Injury</td>
-		<td class="red" *ngIf="fighter.injury">{{fighter.state.injury.name}}</td>
-		<td *ngIf="!fighter.injury">None</td>
+		<td class="red" *ngIf="fighter.state.injury"> {{fighter.state.injury.name}}</td>
+		<td *ngIf="!fighter.state.injury">None</td>
 	</tr>
 </table>
